@@ -351,17 +351,19 @@ function getHTML(/* Code here */){
 
 function randomize(array){
     var item = array.length, temp, index;
+    // While the array still has objects
     while (item > 0) {
+    // Will pick a random index
       index = Math.floor(Math.random() * item);
+    // Decrease item by 1
       item--;
+    // Swaps the last object with the item
       temp = array[item];
       array[item] = array[index];
       array[index] = temp;
     }
-    return array;
+    console.log(array);
   }
 
-console.log(randomize(artists));
-
-
+randomize(artists);
  /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
